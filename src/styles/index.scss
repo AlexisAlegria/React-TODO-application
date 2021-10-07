@@ -12,10 +12,13 @@ body{
 }
 h1{
     text-align: center;
-    color: white
+    color: white;
+    height: 1.5em;
+    line-height: 60px;
 }
 .col-6{
     background: royalblue;
+    border-radius: 10px;
 }
 .list-group-item{
     list-style-type:none;
@@ -24,6 +27,13 @@ h1{
 .counter {
     padding-top: 0px;
     padding-bottom: 0px;
-    font-size: 10px;
+    font-size: 12px;
     color: gray;
+}
+.list-group-item i{
+    visibility: hidden;
+}
+
+.list-group-item:hover i{
+    visibility: visible;
 }
