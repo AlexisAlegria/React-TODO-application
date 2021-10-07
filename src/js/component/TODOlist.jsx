@@ -14,19 +14,24 @@ const AddLiItems = () => {
 	};
 	return (
 		<>
-			<form>
-				<input
-					className="form-control form-control-lg"
-					id="input-text"
-					type="text"
-					onKeyPress={handleKeyPress}
-					placeholder="What's new to be done?"
-				/>
-				{/* <button type="submit" className="btn btn__success btn__lg">
-					Add
-				</button> */}
-			</form>
-
+			<div className="container px-0">
+				<form className="row g-3">
+					<div className="col-10">
+						<input
+							className="form-control"
+							type="text"
+							id="input-text"
+							onKeyPress={handleKeyPress}
+							placeholder="What's new to be done?"
+						/>
+					</div>
+					<div className="col-2">
+						<button type="submit" className="btn btn-light mb-3">
+							Add
+						</button>
+					</div>
+				</form>
+			</div>
 			<ul className="list-group shadow mt-2">
 				{tasks.map((item, index) => {
 					return (
