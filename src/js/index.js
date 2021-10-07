@@ -10,6 +10,7 @@ import "../styles/index.scss";
 
 //import your own components
 import Home from "./component/home.jsx";
+import TODOlist from "./component/TODOlist.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<TODOlist />, document.querySelector("#app"));
