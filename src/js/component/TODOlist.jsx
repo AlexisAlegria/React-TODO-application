@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const AddLiItems = () => {
-	const [tasks, setTasks] = useState(["Please enter your own tasks"]);
+	const [tasks, setTasks] = useState([]);
 
 	const handleKeyPress = e => {
 		if (e.key === "Enter" && e.target.value !== "") {
@@ -9,8 +9,8 @@ const AddLiItems = () => {
 			e.target.value = "";
 		}
 	};
-	const RemoveTask = data => {
-		setTasks(tasks.filter(item => item !== tasks[data]));
+	const RemoveTask = i => {
+		setTasks(tasks.filter((element, index) => index !== i));
 	};
 	return (
 		<>
@@ -43,7 +43,7 @@ const AddLiItems = () => {
 								<a href="#">
 									<i
 										id={index}
-										onClick={e => RemoveTask(e.target.id)}
+										onClick={() => RemoveTask(index)}
 										className="delete far fa-trash-alt"></i>
 								</a>
 							</span>
@@ -56,7 +56,7 @@ const AddLiItems = () => {
 						? "items left"
 						: tasks.length === 1
 						? "item left"
-						: "No tasks, add a task!"}
+						: "No tasks yet, add a your first!"}
 				</li>
 			</ul>
 		</>
